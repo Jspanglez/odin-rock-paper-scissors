@@ -17,3 +17,29 @@ function getComputerChoice() {
 
 getComputerChoice();
 
+function playRound(playerSelection, computerSelection) {
+  player = playerSelection.toLowerCase();
+  computer = computerSelection.toLowerCase();
+
+  const winner = {
+    rock: "Scissors",
+    scissors: "Paper",
+    paper: "Rock"
+  }
+
+  if(player === computer) {
+    console.log("It's a tie!");
+  }
+
+  else if (winner[player] === computer) {
+    console.log("You Win! " + playerSelection + " beats " + computerSelection + ".");
+  }
+
+  else {
+    console.log("You Lose! " + computerSelection + " beats " + playerSelection + ".");
+  }
+}
+
+const playerSelection = "Rock"
+
+playRound(playerSelection, y)
