@@ -83,9 +83,22 @@ function game() {
     getComputerChoice();
     playRound(input, y);
   }
+
+  let msg
+
+  if(playerScore > computerScore) {
+    msg = "Congratualtions! You win the game!"
   }
+
+  else if (playerScore < computerScore) {
+    msg = "Oh dear. Better luck next time!"
+  }
+
+  else {
+    msg = "Well that was uneventful."
+  }
+
+  console.log(`The final score is ${playerScore} - ${computerScore}.\n\n${msg}`);
 }
 
-const playerSelection = "Rock"
-
-playRound(playerSelection, y)
+game();
