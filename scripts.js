@@ -1,4 +1,3 @@
-let x = Math.floor(Math.random() * 3) + 1
 let y
 
 let playerScore = 0
@@ -18,8 +17,6 @@ function getComputerChoice() {
       break;
   }
 }
-
-getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
   let player = playerSelection.toLowerCase();
