@@ -32,8 +32,44 @@ function playRound(playerSelection, computerSelection) {
     paper: "Rock"
   }
 
-  if(player === computer) {
-    console.log("It's a tie!");
+  switch(player) {
+    case "rock":
+      if(computer == "rock") {
+        console.log(`It's a tie!\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+      } else if (computer == "paper") {
+        computerScore += 1
+        console.log(`You Lose! ${computerSelection} beats ${p}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+      } else if (computer == "scissors") {
+        playerScore += 1
+        console.log(`You Win! ${p} beats ${computerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+      }
+      break;
+
+    case "paper":
+      if(computer == "rock") {
+        playerScore += 1
+        console.log(`You Win! ${p} beats ${computerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+      } else if (computer == "paper") {
+        console.log(`It's a tie!\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+      } else if (computer == "scissors") {
+        computerScore += 1
+        console.log(`You Lose! ${computerSelection} beats ${p}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+      }
+      break;
+
+    case "scissors":
+      if(computer == "rock") {
+        computerScore += 1
+        console.log(`You Lose! ${computerSelection} beats ${p}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+      } else if (computer == "paper") {
+        playerScore += 1
+        console.log(`You Win! ${p} beats ${computerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+      } else if (computer == "scissors") {
+        console.log(`It's a tie!\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+      }
+      break;
+  }
+
   }
 
   else if (winner[player] === computer) {
