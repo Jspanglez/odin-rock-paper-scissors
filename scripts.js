@@ -22,8 +22,9 @@ function getComputerChoice() {
 getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
-  player = playerSelection.toLowerCase();
-  computer = computerSelection.toLowerCase();
+  let player = playerSelection.toLowerCase();
+  let p = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+  let computer = computerSelection.toLowerCase();
 
   const winner = {
     rock: "Scissors",
