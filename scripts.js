@@ -1,6 +1,9 @@
 let x = Math.floor(Math.random() * 3) + 1
 let y
 
+let playerScore = 0
+let computerScore = 0
+
 function getComputerChoice() {
   let x = Math.floor(Math.random() * 3) + 1
   switch(x) {
