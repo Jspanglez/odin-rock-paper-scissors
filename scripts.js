@@ -77,7 +77,12 @@ function playRound(playerSelection, computerSelection) {
   }
 
   else {
-    console.log("You Lose! " + computerSelection + " beats " + playerSelection + ".");
+function game() {
+  for (let i = 0; i < 5; i++) {
+    let input = prompt("Rock, Paper, or Scissors?");
+    getComputerChoice();
+    playRound(input, y);
+  }
   }
 }
 
