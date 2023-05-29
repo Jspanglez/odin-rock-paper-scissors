@@ -2,6 +2,7 @@ let x = Math.floor(Math.random() * 3) + 1
 let y
 
 function getComputerChoice() {
+  let x = Math.floor(Math.random() * 3) + 1
   switch(x) {
     case 1:
       y = "Rock"
