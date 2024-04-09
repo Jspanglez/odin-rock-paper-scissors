@@ -74,20 +74,27 @@ function playRound(playerSelection, computerSelection) {
       break;
   }
 
-  /* if(player === computer) {
-    console.log(`It's a tie!\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
-  }
+const rock = document.getElementById("r")
+const paper = document.getElementById("p")
+const scissors = document.getElementById("s")
 
-  else if (winner[player] === computer) {
-    playerScore += 1
-    console.log(`You Win! ${playerSelection} beats ${computerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
-  }
+rock.addEventListener('click',function() {
+  getComputerChoice();
+  playRound("rock", y)
+  game();
+});
 
-  else {
-    computerScore += 1
-    console.log(`You Lose! ${computerSelection} beats ${playerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
-  } */
-}
+paper.addEventListener('click',function() {
+  getComputerChoice();
+  playRound("paper", y)
+  game();
+});
+
+scissors.addEventListener('click',function() {
+  getComputerChoice();
+  playRound("scissors", y)
+  game();
+});
 
 function game() {
   for (let i = 0; i < 5; i++) {
