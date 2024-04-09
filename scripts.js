@@ -39,37 +39,37 @@ function playRound(playerSelection, computerSelection) {
   switch(player) {
     case "rock":
       if(computer == "rock") {
-        console.log(`It's a tie!\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+        text.textContent = (`It's a tie!\n\nYou: ${playerScore}\nCOM: ${computerScore}`)
       } else if (computer == "paper") {
         computerScore += 1
-        console.log(`You Lose! ${computerSelection} beats ${p}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+        text.textContent = (`You Lose! ${computerSelection} beats ${p}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`)
       } else if (computer == "scissors") {
         playerScore += 1
-        console.log(`You Win! ${p} beats ${computerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+        text.textContent = (`You Win! ${p} beats ${computerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`)
       }
       break;
 
     case "paper":
       if(computer == "rock") {
         playerScore += 1
-        console.log(`You Win! ${p} beats ${computerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+        text.textContent = (`You Win! ${p} beats ${computerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`)
       } else if (computer == "paper") {
-        console.log(`It's a tie!\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+        text.textContent = (`It's a tie!\n\nYou: ${playerScore}\nCOM: ${computerScore}`)
       } else if (computer == "scissors") {
         computerScore += 1
-        console.log(`You Lose! ${computerSelection} beats ${p}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+        text.textContent = (`You Lose! ${computerSelection} beats ${p}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`)
       }
       break;
 
     case "scissors":
       if(computer == "rock") {
         computerScore += 1
-        console.log(`You Lose! ${computerSelection} beats ${p}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+        text.textContent = (`You Lose! ${computerSelection} beats ${p}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`)
       } else if (computer == "paper") {
         playerScore += 1
-        console.log(`You Win! ${p} beats ${computerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+        text.textContent = (`You Win! ${p} beats ${computerSelection}.\n\nYou: ${playerScore}\nCOM: ${computerScore}`)
       } else if (computer == "scissors") {
-        console.log(`It's a tie!\n\nYou: ${playerScore}\nCOM: ${computerScore}`);
+        text.textContent = (`It's a tie!\n\nYou: ${playerScore}\nCOM: ${computerScore}`)
       }
       break;
   }
