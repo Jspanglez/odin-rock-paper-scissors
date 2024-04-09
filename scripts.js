@@ -18,6 +18,8 @@ function getComputerChoice() {
   }
 }
 
+const container = document.querySelector("div")
+
 function playRound(playerSelection, computerSelection) {
   let player = playerSelection.toLowerCase();
   let p = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
@@ -28,6 +30,11 @@ function playRound(playerSelection, computerSelection) {
     scissors: "Paper",
     paper: "Rock"
   }
+
+  let text = document.createElement("p")
+  text.style.color = "White"
+  text.style.fontFamily = "Roboto,sans-serif"
+  container.appendChild(text)
 
   switch(player) {
     case "rock":
