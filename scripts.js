@@ -73,6 +73,7 @@ function playRound(playerSelection, computerSelection) {
       }
       break;
   }
+}
 
 const rock = document.getElementById("r")
 const paper = document.getElementById("p")
@@ -97,27 +98,30 @@ scissors.addEventListener('click',function() {
 });
 
 function game() {
-  for (let i = 0; i < 5; i++) {
-    let input = prompt("Rock, Paper, or Scissors?");
-    getComputerChoice();
-    playRound(input, y);
-  }
 
   let msg
 
-  if(playerScore > computerScore) {
+  const winner = document.createElement("p")
+  winner.style.color = "White"
+  winner.style.fontFamily = "Roboto,sans-serif"
+
+  if (playerScore == 5) {
     msg = "Congratualtions! You win the game!"
+    winner.textContent = (`The final score is ${playerScore} - ${computerScore}.\n\n${msg}`)
+    container.appendChild(winner)
+    rock.disabled = true
+    paper.disabled = true
+    scissors.disabled = true
   }
 
-  else if (playerScore < computerScore) {
+  else if (computerScore == 5) {
     msg = "Oh dear. Better luck next time!"
+    winner.textContent = (`The final score is ${playerScore} - ${computerScore}.\n\n${msg}`)
+    container.appendChild(winner)
+    rock.disabled = true
+    paper.disabled = true
+    scissors.disabled = true
   }
-
-  else {
-    msg = "Well that was uneventful."
-  }
-
-  console.log(`The final score is ${playerScore} - ${computerScore}.\n\n${msg}`);
 }
 
 game();
